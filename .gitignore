@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+# Raw and processed data are not committed; run data/download_data.py
+data/raw/
+data/processed/*
+!data/processed/.gitkeep
