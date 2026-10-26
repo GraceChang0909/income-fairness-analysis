@@ -51,6 +51,8 @@ Reusable code lives in [`src/`](src/): the [logistic regression class](src/logis
 ## Run it yourself
 
 ```bash
+git clone https://github.com/GraceChang0909/income-fairness-analysis.git
+cd income-fairness-analysis
 pip install -r requirements.txt
 python data/download_data.py
 jupyter lab
