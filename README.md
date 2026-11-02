@@ -6,7 +6,7 @@ Models like this are used in lending, hiring and marketing. A model can look acc
 
 ## Results
 
-- **Baseline model:** 84.7% test accuracy (vs 76.4% for always predicting "<=50K"), ROC AUC 0.90. The from-scratch implementation matches scikit-learn on 99% of predictions.
+- **Baseline model:** 84.7% test accuracy (vs 76.4% for always predicting "<=50K"), ROC AUC 0.90, in the same range as the classic decision-tree results published for this dataset. The from-scratch implementation matches scikit-learn on 99% of predictions.
 - **Hidden gap:** the model is *more* accurate for women (93% vs 81%), yet it recognizes only **47% of high-earning women vs 60% of high-earning men**, a 13-point equal-opportunity gap.
 - **"Just drop the sex column" doesn't work:** the other features predict sex with an AUC of 0.93, so the gap only shrinks to 8 points.
 - **Targeted fixes work:** adjusting for sex during training cuts the gap to **4 points**, and group-specific thresholds close it (**0.7 points**), each for only **0.4 points of accuracy**. A paired bootstrap on the test set confirms that both the improvement and the cost are real, with the cost below 0.7 points.
@@ -44,7 +44,7 @@ Reusable code lives in [`src/`](src/): the [logistic regression class](src/logis
 
 ## Data
 
-[UCI Adult (Census Income)](https://archive.ics.uci.edu/dataset/2/adult), 48,842 people from the 1994 US Census, CC BY 4.0. Details, column descriptions and loading quirks: [data/README.md](data/README.md).
+[UCI Adult (Census Income)](https://archive.ics.uci.edu/dataset/2/adult), 48,842 people from the 1994 US Current Population Survey (CPS), CC BY 4.0. Details, column descriptions and loading quirks: [data/README.md](data/README.md).
 
 **Limitations:** 1994 data with a $50K threshold not adjusted for inflation; one train/test split, with wide confidence intervals for the smallest race groups; binary sex variable. See the end of notebook 3.
 

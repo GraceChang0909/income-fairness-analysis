@@ -1,6 +1,6 @@
 # Data: UCI Adult (Census Income)
 
-Extracted from the 1994 US Census by Barry Becker. The task is to predict whether a person earns more than $50K per year.
+Extracted from the 1994 Current Population Survey (CPS), run by the US Census Bureau, by Barry Becker. The task is to predict whether a person earns more than $50K per year.
 
 ## Sources (for more detail)
 
